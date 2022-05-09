@@ -1,0 +1,160 @@
+.xDesign-doc {
+    display: absolute;
+}
+
+.hero-section-someWeather {
+    background-color: #4CDCB1;
+    height: 100%;
+    border-radius: 0 0 32px 32px;
+}
+
+.hero-project-category {
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.hero-project-title {
+    font-size: 120px;
+    font-weight: 500;
+}
+
+.hero-project-desc {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.hero-project-info {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.project-section {
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.project-info {
+    font-weight: 300;
+    /* font-size: 16px; */
+}
+
+.hero-project-img {
+    height: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    /* min-height: 500px; */
+}
+
+.project-content {
+    margin-top: 72px;
+}
+
+.img-giant {
+    width: 100%;
+}
+
+.opening-image {
+    width: 100%;
+}
+
+.list-main-point {
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 0.25rem;
+}
+
+.list-item-points {
+    list-style: none;
+    padding-left: 24px;
+    margin: 0;
+}
+
+.wireframe-container {
+    background-color: #F6F6F6;
+}
+
+.idea-tagline  {
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-project-title  {
+        font-size: 80px;
+        line-height: 120%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero-project-title  {
+        font-size: 80px;
+        line-height: 120%;
+    }
+
+    .hero-project-desc, .project-info, .hero-project-category {
+        font-size: 16px;
+    }
+}
+
+/* MOVE TO GLOBAL */
+.Container1 {
+    padding-right: var(--bs-gutter-x, 2.5rem);
+    padding-left: var(--bs-gutter-x, 2.5rem);
+}
+
+.Single-Column-Container, .Two-Column-Container-Second {
+    max-width: 750px;
+}
+
+.Two-Column-Container {
+    max-width: 1100px;
+}
+
+.Section-line-xd {
+    width: 75px;
+    border: 3px solid #272727;
+}
+
+.Section-title {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.Section-type {
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.Section-type {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+@media screen and (max-width: 576px) {
+    .Section-title  {
+        font-size: 36px;
+        line-height: 120%;
+    }
+}
+
+.research-link {
+    text-decoration: none;
+    color: #000!important;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.download-research-link {
+    color: #FF6F00;
+    font-weight: 700;
+    text-decoration: underline;
+}

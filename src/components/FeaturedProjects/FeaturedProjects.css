@@ -1,0 +1,16 @@
+.project {
+    height: 100%;
+}
+
+.section-sub {
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    border-bottom: 1px solid #000;
+}
+
+.bebas-text {
+    font-family: 'Bebas Neue', cursive;
+}
