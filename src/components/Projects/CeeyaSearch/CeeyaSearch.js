@@ -20,7 +20,7 @@ import ProjectFooter from '../../ProjectFooter/ProjectFooter'
 
 export default function CeeyaSearch() {
   const category = "UX DESIGN // WEB Development"
-  const projectTitle = "Ceeya Inc Search&Connect"
+  const projectTitle = "Search.connect"
   const projectDesc = "Ceeya.io’s Search Website Design, from conceptualization to implementation."
   const role = "UI/UX Designer, UX Researcher, Ideation, discovery, prototyping, UX Copywriting"
   const sector = "Search page, Soloprenuer Business"

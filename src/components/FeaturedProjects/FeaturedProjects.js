@@ -83,7 +83,7 @@ export default function FeaturedProjects() {
         </div>
 
         {/* <div className="project"> */}
-          <FeaturedCard category={category.ceeya} link={projectLinks.ceeya} title={"Ceeya Search"} desc={descriptions.ceeya} img={images.ceeya} bgColor={colors.ceeya[0]} textColor={colors.ceeya[1]}/>
+          <FeaturedCard category={category.ceeya} link={projectLinks.ceeya} title={"Search.connect"} desc={descriptions.ceeya} img={images.ceeya} bgColor={colors.ceeya[0]} textColor={colors.ceeya[1]}/>
         {/* </div>/ */}
 
         <Divider height={'32px'}/>

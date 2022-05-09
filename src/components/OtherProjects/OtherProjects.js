@@ -57,7 +57,7 @@ export default function OtherProjects() {
                 </Col> */}
                 <Col className="mb-2" sm={6} md={4} lg={4}>
                     <div className="other-project">
-                        <OtherCard title={"Good Food that Feels Like Home"} link={projectLink.goodFood} img={img.goodFood} category={category.goodFood} bgColor={color.goodFood[0]} textColor={color.goodFood[1]} />
+                        <OtherCard title={"Color My Influence"} link={projectLink.colorArt} img={img.colorArt} category={category.colorArt} bgColor={color.colorArt[0]} textColor={color.colorArt[1]} />
                     </div>
                 </Col>
                 <Col className="mb-2"sm={6} md={4} lg={4}>
@@ -67,7 +67,7 @@ export default function OtherProjects() {
                 </Col>
                 <Col className="mb-2" sm={6} md={4} lg={4}>
                     <div className="other-project">
-                        <OtherCard title={"Color My Influence"} link={projectLink.colorArt} img={img.colorArt} category={category.colorArt} bgColor={color.colorArt[0]} textColor={color.colorArt[1]} />
+                        <OtherCard title={"Good Food that Feels Like Home"} link={projectLink.goodFood} img={img.goodFood} category={category.goodFood} bgColor={color.goodFood[0]} textColor={color.goodFood[1]} />
                     </div>
                 </Col>
                 {/* <Col className="mb-2" sm={6} md={4} lg={4}>

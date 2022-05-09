@@ -8,6 +8,12 @@ import Publications from '../Publications/Publications'
 import './Work.css'
 
 export default function Work() {
+    // FeaturedProjects Order
+    // ceeyaSearch, reBalance, wheelOn, SomeWeather, XDesign, AsianCHI
+
+    // OtherProjects Order
+    // colorArt, nft, goodFood
+
   return (
     <div>
         <div>
@@ -16,11 +22,11 @@ export default function Work() {
                 <div className="pt-5">
                     <Container>
                         <Row>
-                            <Col sm={9} md={9} lg={8}>
-                                <div className="mt-5"></div>
-                                <p className="hero-project-category m-0">DESIGNER // DEVELOPER</p>
+                            <Col sm={10} md={10} lg={9}>
+                                <div className=""></div>
+                                <p className="hero-project-category mt-5">DESIGNER // DEVELOPER // problem solver</p>
                                 {/* <div className="mt-5"></div> */}
-                                <p style={{fontSize: "150px"}} className="bebas-text hero-project-title m-0">Hi, I'm Nabila!👋</p>
+                                <p style={{fontSize: "150px", lineHeight: "150px"}} className="bebas-text hero-project-title m-0">Hi, I'm Nabila!👋</p>
                                 <p style={{fontSize: "32px"}} className="hero-project-desc mb-5">Working at the intersection of design and code, creating experiences that help people.</p>
                             </Col>
                             <Col></Col>

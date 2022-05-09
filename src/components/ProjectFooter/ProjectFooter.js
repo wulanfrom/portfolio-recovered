@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './ProjectFooter.css'
 import { Link } from 'react-router-dom'
+import Divider from '../Divider/Divider'
 
 // icons
 import Behance from '../../resources/icons/behance.svg'
@@ -31,9 +32,10 @@ export default function ProjectFooter(props) {
     <div>
         <div className="footer-div m-0 p-0 px-5 pt-5 pb-3">
             <Container>
+            <Divider height={24}/>
                 <div>
                     <div className="text-white more-projects mb-4 mt-3">
-                        <p>More Projects</p>
+                        <p className="bebas-text" style={{fontSize: "120px", lineHeight: "120px"}}>More Projects</p>
                     </div>
                 </div>
                 <Row>

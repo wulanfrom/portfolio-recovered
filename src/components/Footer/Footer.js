@@ -19,8 +19,8 @@ export default function Footer() {
                 <Row>
                     <Col sm={9} md={8} lg={7} className="d-flex align-items-center justify-content-center">
                         <div className="text-white main-contact">
-                            <p className="footer-tag m-0">Lets Create Something Together</p>
-                            <p style={{fontSize: "120px", lineHeight: "150px"}} className="bebas-text">Lets chat over coffee☕️</p>
+                            <p style={{fontSize: "120px", lineHeight: "120px"}} className="bebas-text m-0">Lets chat over coffee☕️</p>
+                            <p className="footer-tag m-0 mb-4">reach me here</p>
                         </div>
                     </Col>
                 </Row>
