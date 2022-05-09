@@ -23,7 +23,7 @@ export default function ProjectHero(props) {
           <Container className="pt-5">
             <div className="mt-5"></div>
             <p className="hero-project-category m-0">{category}</p>
-            <p className="hero-project-title m-0">{title}</p>
+            <p style={{fontSize: "150px", lineHeight: "150px"}} className="bebas-text hero-project-title m-0">{title}</p>
             <p className="hero-project-desc mb-5">{desc}</p>
             <Row>
               <Col xs={12} sm={10} md={9} lg={8}>

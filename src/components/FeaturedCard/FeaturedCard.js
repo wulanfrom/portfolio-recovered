@@ -18,7 +18,7 @@ export default function FeaturedCard(props) {
     color: ${textColor};
     background-color: ${bgColor};
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 8px;
     min-height: 470px;
     `
 

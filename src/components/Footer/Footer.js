@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './Footer.css'
+import Divider from '../Divider/Divider'
 
 // icons
 import Behance from '../../resources/icons/behance.svg'
@@ -14,10 +15,12 @@ export default function Footer() {
     <div>
         <div className="footer-div m-0 p-0 px-5 pt-5 pb-3">
             <Container>
+                <Divider height={24}/>
                 <Row>
-                    <Col sm={9} md={9} lg={9} className="d-flex align-items-center justify-content-center">
+                    <Col sm={9} md={8} lg={7} className="d-flex align-items-center justify-content-center">
                         <div className="text-white main-contact">
-                            <p>Interested in working together? Lets chat over <p className="drinks">coffee☕️</p></p>
+                            <p className="footer-tag m-0">Lets Create Something Together</p>
+                            <p style={{fontSize: "120px", lineHeight: "150px"}} className="bebas-text">Lets chat over coffee☕️</p>
                         </div>
                     </Col>
                 </Row>

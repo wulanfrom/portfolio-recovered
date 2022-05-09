@@ -7,8 +7,8 @@ export default function Publications() {
     <Container>
         <Row className="d-flex my-5">
             <Col sm={4} lg={5} className="d-flex my-2 p-0">
-                <h1>Publications</h1>
-                <h5 className="ml-1 text-black-50">2</h5>
+                <h1 style={{fontSize: "90px"}} className="bebas-text">Publications</h1>
+                {/* <h5 className="ml-1 text-black-50">2</h5> */}
             </Col>
             <Col className="p-0" sm={8} lg={7}>
                 <div>

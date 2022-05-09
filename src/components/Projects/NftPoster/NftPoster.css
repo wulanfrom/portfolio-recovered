@@ -145,3 +145,7 @@
         line-height: 120%;
     }
 }
+
+.grid-images-gf img {
+    height: 80%;
+}

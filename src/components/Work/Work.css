@@ -1,5 +1,10 @@
 .hero-image {
-    background-color: #c4c4c4;
+    background-color: #171717;
     height: 900px;
     border-radius: 0 0 2rem 2rem;
+    color: #fff;
+}
+
+.source-text {
+    font-family: 'Source Code Pro', monospace;
 }

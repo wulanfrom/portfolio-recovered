@@ -35,7 +35,7 @@ export default function OtherProjects() {
     }
     const projectLink = {
         goodFood:"goodFood",
-        nft: "nft",
+        nft: "nftPoster",
         colorArt: "colorArt",
         asianCHI: "asianCHI",
         xDesign: "kixlab",
@@ -44,8 +44,8 @@ export default function OtherProjects() {
   return (
     <div>
         <div className="sub-title my-5">
-            <h1>Other Projects I've Worked On <sup className="ml-1 text-black-5">4</sup></h1>
-            <p className="section-sub">projects i’ve done on the side.</p>
+            <h1 style={{fontSize: "90px"}} className="bebas-text">Other Projects</h1>
+            {/* <p className="section-sub">projects i’ve done on the side.</p> */}
         </div>
         
         <Container className="p-0">

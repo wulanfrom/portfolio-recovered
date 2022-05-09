@@ -78,8 +78,8 @@ export default function FeaturedProjects() {
   return (
     <div>
         <div className="sub-title my-5">
-            <h1>Featured Projects <sup className="number-project ml-1 text-black-50">5</sup></h1>
-            <p className="section-sub">Here are some projects that I am proud of!</p>
+            <h1 style={{fontSize: "120px"}} className="bebas-text">Featured Projects</h1>
+            {/* <p className="section-sub">Here are some projects that I am proud of!</p> */}
         </div>
 
         {/* <div className="project"> */}

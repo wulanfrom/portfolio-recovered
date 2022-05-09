@@ -28,6 +28,11 @@
     /* width: 120%; */
 }
 
+.project-featured-title {
+    font-weight: 500;
+    font-size: 60px;
+}
+
 .project-img-container {
     overflow: hidden;
     border-radius: 0px 4px 4px 0px;

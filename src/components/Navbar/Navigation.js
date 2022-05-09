@@ -14,7 +14,8 @@ export default function Navigation(props) {
   let pathname = location.pathname.substr(1);
 
   const colors = { // background color, text color
-    "": ["transparent", "#000"],
+    "": ["transparent", "#fff"],
+    "Portfolio-2022/": ["transparent", "#000"],
     "contact": ["transparent", "#fff"],
     "about": ["transparent", "#000"],
     "ceeya": ["#272727", "#fff"],
