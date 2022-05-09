@@ -8,12 +8,12 @@ export default function Contact() {
   return (
     <div>
       <div>
-        <div style={{backgroundColor: "#171717", color: "#fff", height: "80vh" }} className="hero-section d-flex flex-column">
+        <div style={{backgroundColor: "#171717", color: "#fff", height: "100vh" }} className="hero-section d-flex justify-content-center flex-column">
           <div className="pt-5">
             <Container className="pt-5" >
               <div className="mt-5"></div>
               <p className="hero-project-category m-0">want to make something amazing together?</p>
-              <p style={{fontSize: "150px"}} className="bebas-text hero-project-title m-0">Lets chat over coffee</p>
+              <p style={{fontSize: "150px"}} className="bebas-text hero-project-title m-0">Lets chat over coffee☕️</p>
               <p className="hero-project-desc"></p>
 
               <div className="d-flex">
