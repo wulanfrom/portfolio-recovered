@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <div>
       <div>
-        <div style={{backgroundColor: "#171717", color: "#fff", height: "100vh" }} className="hero-section d-flex justify-content-center flex-column">
+        <div style={{backgroundColor: "#171717", color: "#fff", height: "100vh" }} className="hero-contact hero-section d-flex justify-content-center flex-column">
           <div className="pt-5">
             <Container className="pt-5" >
               <div className="mt-5"></div>

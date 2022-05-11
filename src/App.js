@@ -1,6 +1,10 @@
+import React, { useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
+import './App.scss'
 import { Routes, Route, Link } from "react-router-dom";
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
+
 
 import Navigation from './components/Navbar/Navigation'
 import Work from './components/Work/Work'
@@ -19,25 +23,28 @@ import GoodFood from './components/Projects/GoodFood/GoodFood';
 import AsianCHI from './components/Projects/AsianCHI/AsianCHI';
 
 function App() {
-  return (
-    <div className="App">
-        <Navigation />
+  const containerRef = useRef(null)
+  const { scroll } = useLocomotiveScroll();
 
-        <Routes>
-          <Route path="/" element={<Work />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="ceeya" element={<CeeyaSearch />} />
-          <Route path="someWeather" element={<SomeWeather />} />
-          <Route path="reBalance" element={<ReBalance />} />
-          <Route path="wheelOn" element={<WheelOn />} />
-          <Route path="xDesign" element={<XDesign />} />
-          <Route path="nftPoster" element={<NftPoster />} />
-          <Route path="colorArt" element={<ColorArt />} />
-          <Route path="goodFood" element={<GoodFood />} />
-          <Route path="asianCHI" element={<AsianCHI />} />
-        </Routes>
-    </div>
+  return (
+      <div>
+          <Navigation />
+
+          <Routes>
+            <Route path="/" element={<Work />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="ceeya" element={<CeeyaSearch />} />
+            <Route path="someWeather" element={<SomeWeather />} />
+            <Route path="reBalance" element={<ReBalance />} />
+            <Route path="wheelOn" element={<WheelOn />} />
+            <Route path="xDesign" element={<XDesign />} />
+            <Route path="nftPoster" element={<NftPoster />} />
+            <Route path="colorArt" element={<ColorArt />} />
+            <Route path="goodFood" element={<GoodFood />} />
+            <Route path="asianCHI" element={<AsianCHI />} />
+          </Routes>
+      </div>
   );
 }
 

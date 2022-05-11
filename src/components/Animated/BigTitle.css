@@ -1,0 +1,4 @@
+.line-wrap {
+    overflow: hidden;
+    min-height: 32px;
+}
