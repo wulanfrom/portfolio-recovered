@@ -29,7 +29,7 @@ export default function ProjectFooter(props) {
     }
 
   return (
-    <div>
+    <div data-scroll-section>
         <div className="footer-div m-0 p-0 px-5 pt-5 pb-3">
             <Container>
             <Divider height={24}/>

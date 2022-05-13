@@ -1,6 +1,6 @@
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
-import BigTitle from '../Animated/BigTitle'
+import BigTitle from '../BigTitle/BigTitle'
 import Divider from '../Divider/Divider'
 import FeaturedProjects from '../FeaturedProjects/FeaturedProjects'
 import Footer from '../Footer/Footer'
@@ -19,9 +19,9 @@ export default function Work() {
     // colorArt, nft, goodFood
 
   return (
-    <div>
+    <div data-scroll-section>
         <div>
-            <div style={{backgroundColor: "#171717", color: "#fff", height: "900px"}} className="hero-section hero-animated d-flex flex-column">
+            <div style={{backgroundColor: "#171717", color: "#fff", height: "110vh"}} className="hero-section hero-animated d-flex flex-column">
                 <Divider height={150}/>
                 {/* <div className="pt-5">
                     <Container>
@@ -43,6 +43,8 @@ export default function Work() {
         </div>
 
         <Container>
+            <Divider height={72}/>
+
             <div id="featured-projects">
                 <FeaturedProjects />
             </div>

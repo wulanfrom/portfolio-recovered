@@ -39,7 +39,7 @@ export default function SomeWeather() {
   const colors = ["#4CDCB1", "#000"]
 
   return (
-    <div className="someWeather-doc">
+    <div className="someWeather-doc" data-scroll-section>
       <ProjectHero bgColor={colors[0]} textColor={colors[1]} heroImg={someWeatherpng} category={category} title={projectTitle} desc={projectDesc} role={role} sector={sector}/>
 
       <div className="project-content">

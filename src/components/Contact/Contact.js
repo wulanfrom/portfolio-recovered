@@ -6,7 +6,7 @@ import Divider from '../Divider/Divider'
 
 export default function Contact() {
   return (
-    <div>
+    <div data-scroll-section>
       <div>
         <div style={{backgroundColor: "#171717", color: "#fff", height: "100vh" }} className="hero-contact hero-section d-flex justify-content-center flex-column">
           <div className="pt-5">

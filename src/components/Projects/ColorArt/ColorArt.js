@@ -66,7 +66,7 @@ export default function ColorArt() {
       ];
 
   return (
-    <div className="colorArt-doc">
+    <div className="colorArt-doc" data-scroll-section>
         <ProjectHero bgColor={colors[0]} textColor={colors[1]} heroImg={colorHero} category={category} title={projectTitle} desc={projectDesc} role={role} sector={sector}/>
     
         <div className="project-content">

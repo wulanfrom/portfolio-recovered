@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'
 import { Routes, Route, Link } from "react-router-dom";
@@ -22,29 +22,70 @@ import ColorArt from './components/Projects/ColorArt/ColorArt';
 import GoodFood from './components/Projects/GoodFood/GoodFood';
 import AsianCHI from './components/Projects/AsianCHI/AsianCHI';
 
+// hooks
+import useLocoScroll from './hooks/useLocoScroll'
+
 function App() {
   const containerRef = useRef(null)
   const { scroll } = useLocomotiveScroll();
 
-  return (
-      <div>
-          <Navigation />
+  // pre-loader , helps with animation
+  const [preloader, setPreloader] = useState(true);
+  useLocoScroll(!preloader);
 
-          <Routes>
-            <Route path="/" element={<Work />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="ceeya" element={<CeeyaSearch />} />
-            <Route path="someWeather" element={<SomeWeather />} />
-            <Route path="reBalance" element={<ReBalance />} />
-            <Route path="wheelOn" element={<WheelOn />} />
-            <Route path="xDesign" element={<XDesign />} />
-            <Route path="nftPoster" element={<NftPoster />} />
-            <Route path="colorArt" element={<ColorArt />} />
-            <Route path="goodFood" element={<GoodFood />} />
-            <Route path="asianCHI" element={<AsianCHI />} />
-          </Routes>
-      </div>
+  const [timer, setTimer] = useState(1);
+  const id = useRef(null);
+  const clear = () => {
+    window.clearInterval(id.current);
+    setPreloader(false);
+  }
+
+  // for initial loading
+  useEffect(() => {
+    id.current = window.setInterval(() => {
+      setTimer((timer) => timer - 1); //decrease by one second
+    }, 1000)
+  }, [])
+
+
+  //for timer loading
+  useEffect(() => {
+    if (timer == 0) {
+      clear(); //stop the timer if it goes to 0
+    }
+  }, [timer])
+
+
+
+  return (
+      <>
+      { preloader ? (
+        <div style={{height: "100vh", backgroundColor:"#171717", color: "#fff"}} className="loader-wrapper absolute d-flex justify-content-center align-items-center flex-column">
+          <h1 style={{ fontFamily: "'Bebas Neue', cursive", fontSize: "80px" }}>Portfolio is Loading</h1>
+          <h2 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300 }}>Please wait</h2>
+        </div>
+      ): (
+        <div data-scroll-container id="portfolio-container">
+            <Navigation />
+
+            <Routes>
+              <Route path="/" element={<Work />} />
+              <Route path="about" element={<About />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="ceeya" element={<CeeyaSearch />} />
+              <Route path="someWeather" element={<SomeWeather />} />
+              <Route path="reBalance" element={<ReBalance />} />
+              <Route path="wheelOn" element={<WheelOn />} />
+              <Route path="xDesign" element={<XDesign />} />
+              <Route path="nftPoster" element={<NftPoster />} />
+              <Route path="colorArt" element={<ColorArt />} />
+              <Route path="goodFood" element={<GoodFood />} />
+              <Route path="asianCHI" element={<AsianCHI />} />
+            </Routes>
+          </div>
+        ) 
+      }
+      </>
   );
 }
 

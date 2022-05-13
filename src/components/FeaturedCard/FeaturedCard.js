@@ -23,7 +23,7 @@ export default function FeaturedCard(props) {
     `
 
     return (
-        <Container className="p-0 feature-card-container">
+        <Container className="p-0 feature-card-container" data-scroll>
             <Link className="link-container" to={ projectLink }>
                 {/* <Tilt className="Tilt" options={{ scale: 1.00, perspective: 2000, max : 6, speed: 500 }} style={{ width: "100%" }} > */}
                     <ProjectCard>

@@ -17,7 +17,7 @@ export default function ProjectHero(props) {
     const border_style = '2px solid ' + textColor;
 
   return (
-    <div>
+    <div data-scroll-section>
         <div style={{backgroundColor: bgColor, color: textColor}} className="hero-section d-flex flex-column">
         <div className="pt-5">
           <Container className="pt-5">

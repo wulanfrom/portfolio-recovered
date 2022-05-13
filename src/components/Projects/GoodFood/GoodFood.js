@@ -65,7 +65,7 @@ export default function GoodFood() {
         },
       ];
   return (
-    <div className="nftPoster-doc">
+    <div className="nftPoster-doc" data-scroll-section>
         <ProjectHero bgColor={colors[0]} textColor={colors[1]} heroImg={goodFoodHero} category={category} title={projectTitle} desc={projectDesc} role={role} sector={sector}/>
         <div className="project-content">
             {/* Overview */}

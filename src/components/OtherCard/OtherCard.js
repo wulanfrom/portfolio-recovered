@@ -23,7 +23,7 @@ export default function OtherCard(props) {
     `
 
     return (
-        <div className="other-card-container m-0">
+        <div data-scroll-section className="other-card-container m-0">
             <Link className="link-container-other" to={ projectLink }>
                 {/* <Tilt className="Tilt tilt-other" options={{ scale: 1.01, perspective: 1500, max : 10, speed: 500 }} style={{ height: 250, width: "100%" }} > */}
                     <OtherCardContainer>

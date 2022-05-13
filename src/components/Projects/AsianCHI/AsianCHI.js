@@ -28,7 +28,7 @@ export default function AsianCHI() {
     }
 
   return (
-    <div className="asianCHI-doc">
+    <div className="asianCHI-doc" data-scroll-section>
         <ProjectHero bgColor={colors[0]} textColor={colors[1]} heroImg={nftpng} category={category} title={projectTitle} desc={projectDesc} role={role} sector={sector}/>
     
         <div className="project-content">

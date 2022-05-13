@@ -26,7 +26,7 @@ export default function CeeyaSearch() {
   const sector = "Search page, Soloprenuer Business"
   const colors = ["#272727", "#fff"]
   return (
-    <div className="ceeyaSearch-doc">
+    <div className="ceeyaSearch-doc" data-scroll-section>
       <ProjectHero bgColor={colors[0]} textColor={colors[1]} heroImg={someWeatherpng} category={category} title={projectTitle} desc={projectDesc} role={role} sector={sector}/>
 
       <div className="project-content">

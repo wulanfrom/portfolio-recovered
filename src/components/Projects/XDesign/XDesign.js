@@ -23,7 +23,7 @@ export default function XDesign() {
     const sector = "Explainable AI Education, Interface Design"
     const colors = ["#E8E8E8", "#000"]
   return (
-    <div className="xDesign-doc">
+    <div className="xDesign-doc" data-scroll-section>
          <ProjectHero bgColor={colors[0]} textColor={colors[1]} heroImg={xdesignpng} category={category} title={projectTitle} desc={projectDesc} role={role} sector={sector}/>
     
          <div className="project-content">

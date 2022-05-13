@@ -50,7 +50,7 @@ export default function WheelOn() {
     }
 
   return (
-    <div>
+    <div data-scroll-section>
         <div className="wheelOn-doc">
             <ProjectHero bgColor={colors[0]} textColor={colors[1]} heroImg={wheelonpng} category={category} title={projectTitle} desc={projectDesc} role={role} sector={sector}/>
 

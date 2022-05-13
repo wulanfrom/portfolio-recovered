@@ -52,7 +52,7 @@ export default function reBalance() {
     };
 
   return (
-    <div>
+    <div data-scroll-section>
         <div className="reBalance-doc">
             <ProjectHero bgColor={colors[0]} textColor={colors[1]} heroImg={rebalancepng} category={category} title={projectTitle} desc={projectDesc} role={role} sector={sector}/>
 

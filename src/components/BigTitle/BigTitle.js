@@ -1,5 +1,6 @@
 import React, {useRef, useEffect  } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import SplitText from '../../utils/Split3.min.js'
 import { gsap } from 'gsap'
 import './BigTitle.css'
 
@@ -7,6 +8,15 @@ export default function BigTitle({lineContent1, lineContent2}) {
     let line1 = useRef(null);
     let line2 = useRef(null);
     let line3 = useRef(null);
+
+    // initialize animation
+    // useEffect(() => {
+    //     const split = new SplitText("#main-hero-text", {
+    //         type: 'split', 
+    //         lineClass: 'lineChildren',
+    //     })
+
+    // }, [])
 
     const timeline = gsap.timeline();
 
@@ -28,16 +38,16 @@ export default function BigTitle({lineContent1, lineContent2}) {
   return (
     <Container>
         <Row>
-            <Col sm={10} md={10} lg={10}>
+            <Col sm={10} md={10} lg={101}>
             <div className="page-title">
                 <div className="line-wrap ">
                     <div ref={el => line1 = el} className="line hero-project-category mt-5">{lineContent1}</div>
                 </div>
                 <div className="line-wrap">
-                    <div ref={el => line2 = el} style={{fontSize: "150px", lineHeight: "180px"}} className="line bebas-text hero-project-title m-0">{lineContent2}</div>
+                    <div id="main-hero-text" ref={el => line2 = el} style={{fontSize: "150px", lineHeight: "180px"}} className="line bebas-text hero-project-title m-0">{lineContent2}</div>
                 </div>
                 <div className="line-wrap hero-project-desc mb-5">
-                    <p ref={el => line3 = el}>Working at the intersection of design and code, creating experiences that help people.</p>
+                    <p ref={el => line3 = el}  style={{fontSize: "32px", lineHeight: "54px"}}>Working at the intersection of design and code, creating experiences that help people.</p>
                 </div>
             </div>
             </Col>
