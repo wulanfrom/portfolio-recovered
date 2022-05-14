@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './OtherProjects.css'
 
 import { Row, Col, Container } from 'react-bootstrap'
 import OtherCard from '../OtherCard/OtherCard'
+
+// Animations
+import SplitText from '../../utils/Split3.min.js'
+import { gsap } from 'gsap'
+import useOnScreen from '../../hooks/useOnScreen'
+import cn from 'classnames'
 
 // other projects
 import Nft from '../../resources/nftPoster/nft.png'
@@ -41,10 +47,39 @@ export default function OtherProjects() {
         xDesign: "kixlab",
     }
 
+    const titleRef = useRef();
+    const [reveal, setReveal] = useState(false);
+    const onScreen = useOnScreen(titleRef);
+
+        useEffect(() => {
+            if (onScreen) setReveal(onScreen)
+        }, [onScreen])
+        
+        useEffect(() => {
+            if (reveal) {
+                const split = new SplitText(".sub-title", {
+                    type: "lines",
+                    linesClass: "lineChildren",
+                });
+                const splitParent = new SplitText(".sub-title", {
+                    type: "lines",
+                    linesClass: "lineParent",
+                });
+        
+                gsap.fromTo(split.lines, {y:200}, {
+                    duration: 1,
+                    y: 0,
+                    opacity: 1,
+                    stagger: 0.1,
+                    ease: 'power2'
+                })
+            }
+        }, [reveal])
+
   return (
     <div>
         <div className="sub-title my-5">
-            <h1 style={{fontSize: "90px"}} className="bebas-text">Other Projects</h1>
+            <h1 ref={titleRef} style={{fontSize: "90px"}} className={cn("bebas-text", {"is-reveal": reveal})}>Other Projects</h1>
             {/* <p className="section-sub">projects i’ve done on the side.</p> */}
         </div>
         

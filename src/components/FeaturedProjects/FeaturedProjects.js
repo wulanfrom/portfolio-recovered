@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react'
-import SplitText from '../../utils/Split3.min.js'
-import { gsap } from 'gsap'
+import React, { useEffect, useState, useRef } from 'react'
 import './FeaturedProjects.css'
 import Divider from '../Divider/Divider'
 import FeaturedCard from '../FeaturedCard/FeaturedCard'
+
+// Animations
+import SplitText from '../../utils/Split3.min.js'
+import { gsap } from 'gsap'
+import useOnScreen from '../../hooks/useOnScreen'
+import cn from 'classnames'
 
 // featured projects
 import CeeyaImage from '../../resources/featuredPictures/ceeya-featured.png'
@@ -16,7 +20,6 @@ import AsianCHI from '../../resources/featuredPictures/asianCHI-featured.png'
 // other projects
 import Nft from '../../resources/nftPoster/nft.png'
 import ColorArt from '../../resources/colorArt/color.png'
-// import AsianCHI from '../../resources/asianCHI/asianchi.png'
 import GoodFood from '../../resources/goodFood/goodFood.png'
 
 
@@ -70,10 +73,39 @@ export default function FeaturedProjects() {
     kixlab: "xdesign"
   }
 
+  const titleRef = useRef();
+  const [reveal, setReveal] = useState(false);
+  const onScreen = useOnScreen(titleRef);
+
+    useEffect(() => {
+        if (onScreen) setReveal(onScreen)
+    }, [onScreen])
+    
+    useEffect(() => {
+        if (reveal) {
+            const split = new SplitText(".sub-title", {
+                type: "lines",
+                linesClass: "lineChildren",
+              });
+              const splitParent = new SplitText(".sub-title", {
+                type: "lines",
+                linesClass: "lineParent",
+              });
+    
+            gsap.fromTo(split.lines, {y:200}, {
+                duration: 1,
+                y: 0,
+                opacity: 1,
+                stagger: 0.1,
+                ease: 'power2'
+            })
+        }
+    }, [reveal])
+
   return (
     <div>
         <div className="sub-title my-5">
-            <h1 style={{fontSize: "120px"}} className="bebas-text">Featured Projects</h1>
+            <h1 ref={titleRef} style={{fontSize: "120px"}} className={cn("bebas-text", {"is-reveal": reveal})}>Featured Projects</h1>
             {/* <p className="section-sub">Here are some projects that I am proud of!</p> */}
         </div>
 

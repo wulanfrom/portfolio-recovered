@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './Footer.css'
 import Divider from '../Divider/Divider'
+import SplitText from '../../utils/Split3.min.js'
+import { gsap } from 'gsap'
+import useOnScreen from '../../hooks/useOnScreen'
+import cn from 'classnames'
+
+
 
 // icons
 import Behance from '../../resources/icons/behance.svg'
@@ -11,16 +17,45 @@ import Email from '../../resources/icons/Vector-3.svg'
 import Github from '../../resources/icons/Vector.svg'
 
 export default function Footer() {
+    const footerRef = useRef();
+    const [reveal, setReveal] = useState(false);
+    const onScreen = useOnScreen(footerRef);
+
+    useEffect(() => {
+        if (onScreen) setReveal(onScreen)
+    }, [onScreen])
+    
+    useEffect(() => {
+        if (reveal) {
+            const split = new SplitText(".footer-move-text", {
+                type: "lines",
+                linesClass: "lineChildren",
+              });
+              const splitParent = new SplitText(".footer-move-text", {
+                type: "lines",
+                linesClass: "lineParent",
+              });
+    
+            gsap.fromTo(split.lines, {y:200}, {
+                duration: 1,
+                y: 0,
+                opacity: 1,
+                stagger: 0.1,
+                ease: 'power2'
+            })
+        }
+    }, [reveal])
+
   return (
     <div>
         <div className="footer-div m-0 p-0 px-5 pt-5 pb-3">
             <Container>
                 <Divider height={24}/>
-                <Row>
-                    <Col sm={9} md={8} lg={7} className="d-flex align-items-center justify-content-center">
+                <Row ref={footerRef} className={cn({"is-reveal": reveal})}>
+                    <Col sm={9} md={8} lg={7} className="d-flex align-items-center">
                         <div className="text-white main-contact">
-                            <p style={{fontSize: "120px", lineHeight: "120px"}} className="bebas-text m-0">Lets chat over coffee☕️</p>
-                            <p className="footer-tag m-0 mb-4">reach me here</p>
+                            <p style={{fontSize: "120px", lineHeight: "120px"}} className="footer-move-text bebas-text m-0">Lets chat over coffee☕️</p>
+                            <p className="footer-move-text  footer-tag m-0 mb-4">reach me here</p>
                         </div>
                     </Col>
                 </Row>

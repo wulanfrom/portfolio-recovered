@@ -12,11 +12,6 @@ export default function BigTitle({lineContent1, lineContent2}) {
     const timeline = gsap.timeline();
 
     useEffect(() => {
-        // timeline
-        //     .from(line1, {y: '100%',  ease: "power3.out", stagger: { amount: .15 }})
-        //     .from(line2, {y: '220%', ease: "power3.out", duration: 1, rotation: 20, stagger: { amount: .15 }}, '<.5')
-        //     .fromTo(line3, {opacity: 0 }, { opacity: 1 }, 1.5)
-
         const split = new SplitText("#main-hero-text", {
             type: 'lines',
             linesClass: 'lineChildren',
