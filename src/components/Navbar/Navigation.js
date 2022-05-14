@@ -56,7 +56,7 @@ export default function Navigation(props) {
   const border_bottom = '1px solid ' + chosenColor[1];
 
   return (
-    <Navbar className="wulanfrom-navbar" style={{ backgroundColor: chosenColor[0] }} expand="lg">
+    <Navbar data-scroll-section className="wulanfrom-navbar" style={{ color: chosenColor[1], backgroundColor: chosenColor[0] }} expand="lg">
         <Container className="pb-1" style={{ borderBottom: border_bottom }}>
             <Navbar.Brand style={{ color: chosenColor[1] }} href="/">wulanfrom</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

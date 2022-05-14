@@ -1,9 +1,9 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import './OtherCard.css'
 import styled, { css } from 'styled-components'
 import Tilt from 'react-tilt'
+import './OtherCard.scss'
 
 export default function OtherCard(props) {
     const category = props.category;
@@ -23,7 +23,7 @@ export default function OtherCard(props) {
     `
 
     return (
-        <div data-scroll-section className="other-card-container m-0">
+        <div className="other-card-container m-0" data-scroll>
             <Link className="link-container-other" to={ projectLink }>
                 {/* <Tilt className="Tilt tilt-other" options={{ scale: 1.01, perspective: 1500, max : 10, speed: 500 }} style={{ height: 250, width: "100%" }} > */}
                     <OtherCardContainer>

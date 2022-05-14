@@ -1,12 +1,41 @@
-import React from 'react'
-import './Publications.css'
+import React, { useState, useRef, useEffect } from 'react'
+import './Publications.scss'
 import { Container, Row, Col } from 'react-bootstrap'
+import SplitText from '../../utils/Split3.min.js'
+import { gsap } from 'gsap'
+import useOnScreen from '../../hooks/useOnScreen'
+import cn from 'classnames'
+
 
 export default function Publications() {
+    const ref = useRef();
+    const [reveal, setReveal] = useState(false);
+    const onScreen = useOnScreen(ref);
+
+    useEffect(() => {
+        if (onScreen) setReveal(onScreen)
+    }, [onScreen])
+
+    useEffect(() => {
+        if (reveal){
+            const split = new SplitText(".pubs-text", {
+                type: 'lines',
+            });
+
+            gsap.to(split.lines, {
+                duration: 1,
+                y: -50,
+                opacity: 1,
+                stagger: 0.1,
+                ease: 'power2'
+            })
+        }
+    }, [reveal])
+
   return (
     <div>
-        <Container>
-            <Row className="d-flex my-5">
+        <Container ref={ref} className={cn("pubs-text d-flex my-5", {"is-reveal": reveal})}>
+            <Row>
                 <Col sm={4} lg={5} className="d-flex p-0">
                     <h1 style={{fontSize: "90px"}} className="bebas-text">Publications</h1>
                     {/* <h5 className="ml-1 text-black-50">2</h5> */}

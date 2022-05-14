@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import SplitText from '../../utils/Split3.min.js'
+import { gsap } from 'gsap'
 import './FeaturedProjects.css'
-
 import Divider from '../Divider/Divider'
 import FeaturedCard from '../FeaturedCard/FeaturedCard'
 
@@ -11,12 +12,6 @@ import ReBalanceImage from '../../resources/featuredPictures/reBalance-featured.
 import WheelOn from '../../resources/featuredPictures/wheelOn-featured.png'
 import XDesign from '../../resources/featuredPictures/kixlab-featured.png'
 import AsianCHI from '../../resources/featuredPictures/asianCHI-featured.png'
-
-// inner featured pictures
-// import CeeyaDevice from '../../resources/featuredPictures/ceeya-device.png'
-// import SomeWeatherDevice from '../../resources/featuredPictures/sw-device.png'
-// import ReBalanceDevice from '../../resources/featuredPictures/rb-device.png'
-// import WheelOnDevice from '../../resources/featuredPictures/wo-device.png'
 
 // other projects
 import Nft from '../../resources/nftPoster/nft.png'

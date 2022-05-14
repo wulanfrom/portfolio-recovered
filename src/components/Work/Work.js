@@ -6,20 +6,17 @@ import FeaturedProjects from '../FeaturedProjects/FeaturedProjects'
 import Footer from '../Footer/Footer'
 import OtherProjects from '../OtherProjects/OtherProjects'
 import Publications from '../Publications/Publications'
+import Navigation from '../Navbar/Navigation'
 import './Work.css'
 
 import { CSSTransition } from 'react-transition-group';
 import { gsap } from 'gsap'
 
 export default function Work() {
-    // FeaturedProjects Order
-    // ceeyaSearch, reBalance, wheelOn, SomeWeather, XDesign, AsianCHI
-
-    // OtherProjects Order
-    // colorArt, nft, goodFood
-
+    
   return (
     <div data-scroll-section>
+        {/* <Navigation />  */}
         <div>
             <div style={{backgroundColor: "#171717", color: "#fff", height: "110vh"}} className="hero-section hero-animated d-flex flex-column">
                 <Divider height={150}/>

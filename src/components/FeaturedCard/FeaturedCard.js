@@ -1,5 +1,5 @@
 import React from 'react'
-import './FeaturedCard.css'
+import './FeaturedCard.scss'
 import { Link } from 'react-router-dom'
 
 import { Container, Row, Col, Button } from 'react-bootstrap'

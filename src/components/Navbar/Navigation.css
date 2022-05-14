@@ -1,5 +1,7 @@
 .wulanfrom-navbar {
     z-index: 10;
+    position: absolute;
+    width: 100%;
 }
 .nav-link {
     font-family: 'Source Code Pro', monospace;
@@ -13,8 +15,7 @@
     font-weight: 700;
 }
 
-.wulanfrom-navbar {
-    /* border-bottom: 1px solid #000; */
+/* .wulanfrom-navbar {
     position: absolute;
     width: 100%;
-}
+} */

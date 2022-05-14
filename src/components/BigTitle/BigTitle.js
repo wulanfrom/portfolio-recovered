@@ -9,30 +9,31 @@ export default function BigTitle({lineContent1, lineContent2}) {
     let line2 = useRef(null);
     let line3 = useRef(null);
 
-    // initialize animation
-    // useEffect(() => {
-    //     const split = new SplitText("#main-hero-text", {
-    //         type: 'split', 
-    //         lineClass: 'lineChildren',
-    //     })
-
-    // }, [])
-
     const timeline = gsap.timeline();
 
     useEffect(() => {
-        // gsap.from([line1, line2], 0.8, {
-        //     delay: 0.8,
-        //     ease: "power3.out",
-        //     y: 200,
-        //     stagger: {
-        //         amount: .15,
-        //     }
-        // })
-        timeline
-            .from(line1, {y: '100%',  ease: "power3.out", stagger: { amount: .15 }})
-            .from(line2, {y: '220%', ease: "power3.out", duration: 1, rotation: 20, stagger: { amount: .15 }}, '<.5')
-            .fromTo(line3, {opacity: 0 }, { opacity: 1 }, 1.5)
+        // timeline
+        //     .from(line1, {y: '100%',  ease: "power3.out", stagger: { amount: .15 }})
+        //     .from(line2, {y: '220%', ease: "power3.out", duration: 1, rotation: 20, stagger: { amount: .15 }}, '<.5')
+        //     .fromTo(line3, {opacity: 0 }, { opacity: 1 }, 1.5)
+
+        const split = new SplitText("#main-hero-text", {
+            type: 'lines',
+            linesClass: 'lineChildren',
+        });
+
+        const splitParent = new SplitText("#main-hero-text", {
+            type: 'lines',
+            linesClass: 'lineParent',
+        });
+
+        gsap.to(split.lines, {
+            duration: 1,
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+            ease: 'power2'
+        })
     }, [line1, line2, line3])
 
   return (
@@ -44,7 +45,7 @@ export default function BigTitle({lineContent1, lineContent2}) {
                     <div ref={el => line1 = el} className="line hero-project-category mt-5">{lineContent1}</div>
                 </div>
                 <div className="line-wrap">
-                    <div id="main-hero-text" ref={el => line2 = el} style={{fontSize: "150px", lineHeight: "180px"}} className="line bebas-text hero-project-title m-0">{lineContent2}</div>
+                    <div id="main-hero-text" ref={el => line2 = el} style={{fontSize: "200px", lineHeight: "220px"}} className="line bebas-text hero-project-title m-0">{lineContent2}</div>
                 </div>
                 <div className="line-wrap hero-project-desc mb-5">
                     <p ref={el => line3 = el}  style={{fontSize: "32px", lineHeight: "54px"}}>Working at the intersection of design and code, creating experiences that help people.</p>

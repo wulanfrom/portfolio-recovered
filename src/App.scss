@@ -72,3 +72,19 @@ html.has-scroll-dragging {
   [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
     right: auto;
     bottom: 0; }
+
+
+// navbar fix
+html.has-scroll-smooth {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+[data-load-container] {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
