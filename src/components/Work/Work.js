@@ -32,13 +32,13 @@ export default function Work() {
                 <FeaturedProjects />
             </div>
 
-            <Divider height={120}/>
+            <Divider height={60}/>
 
             <div id="other-projects">
                 <OtherProjects />
             </div>
             
-            <Divider height={180}/>
+            <Divider height={250}/>
 
             <div id="publications">
                 <Publications />

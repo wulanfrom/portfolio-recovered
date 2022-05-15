@@ -23,7 +23,7 @@ export default function FeaturedCard(props) {
     `
 
     return (
-    <Tilt className="Tilt" options={{ max : 8, scale: 1.01, perspective: 2000, speed: 800, axis: "Y", easing: "cubic-bezier(.1,.98,.52,.99)", }}>
+    <Tilt className="Tilt" options={{ max : 8, scale: 1.01, perspective: 3000, transition: true, speed: 800, axis: "Y", easing: "cubic-bezier(.03,.98,.52,.99)", }}>
         <Container className="p-0 feature-card-container">
             <Link className="link-container" to={ projectLink }>
                 {/* <Tilt className="Tilt" options={{ scale: 1.00, perspective: 2000, max : 6, speed: 500 }} style={{ width: "100%" }} > */}
