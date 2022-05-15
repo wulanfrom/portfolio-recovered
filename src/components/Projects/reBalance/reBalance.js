@@ -52,10 +52,10 @@ export default function reBalance() {
     };
 
   return (
-    <div data-scroll-section>
-        <div className="reBalance-doc">
+    <div data-scroll-container>
+        <div data-scroll-section className="reBalance-doc">
             <ProjectHero bgColor={colors[0]} textColor={colors[1]} heroImg={rebalancepng} category={category} title={projectTitle} desc={projectDesc} role={role} sector={sector}/>
-
+            <div style={{height: "72px"}}></div>
             <div className="project-content">
                 {/* Overview */}
                 <Container>
@@ -481,11 +481,12 @@ export default function reBalance() {
                 </Container>
 
                 <Divider height={72} />
+
             </div>
 
             {/* Footer */}
             <ProjectFooter next={wheelOnProject} prev={someWeatherProject}/>
-            </div>
+        </div>
     </div>
   )
 }

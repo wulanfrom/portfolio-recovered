@@ -1,10 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 import './Contact.css'
+import SplitText from '../../utils/Split3.min.js'
+import { gsap } from 'gsap'
 
 import Divider from '../Divider/Divider'
 
 export default function Contact() {
+  const timeline = gsap.timeline();
+
+    useEffect(() => {
+        const split = new SplitText(".hero-project-title", {
+            type: 'lines',
+            linesClass: 'lineChildren',
+        });
+
+        const splitParent = new SplitText(".hero-project-title", {
+            type: 'lines',
+            linesClass: 'lineParent',
+        });
+
+        gsap.to(split.lines, {
+            duration: 1,
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+            ease: 'power2'
+        })
+
+        gsap.fromTo(".hero-project-category", {opacity: 0, y: 50}, {opacity: 1, duration: 1, y:0});
+        gsap.fromTo(".social-links", {opacity: 0, y: 50}, {opacity: 1, duration: 1, y:0, stagger: 0.1});
+    }, [])
+
   return (
     <div data-scroll-section>
       <div>

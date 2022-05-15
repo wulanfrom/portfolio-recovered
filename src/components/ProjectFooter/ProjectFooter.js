@@ -23,16 +23,34 @@ export default function ProjectFooter(props) {
 
     const projectLinks = {
         ceeya: "ceeya",
-        someWeather: "someWeather",
         reBalance: "reBalance",
-        wheelOn: "wheelOn"
+        wheelOn: "wheelOn",
+        someWeather: "someWeather",
+        xdesign: "xdesign",
+        asianCHI: "asianchi",
+        color: "colorArt",
+        nft: "nftArt",
+        goodFood: "goodFood"
+    }
+
+    // ceeya,  rebalane, wheelon, someweather, xdesign, asian chi, color my influence, nft, goodfood
+    const nextProjects = {
+        ceeya: [projectLinks.reBalance, projectLinks.wheelOn],
+        reBalance: [projectLinks.ceeya, projectLinks.wheelOn],
+        wheelOn: [projectLinks.reBalance, projectLinks.someWeather],
+        someWeather: [projectLinks.wheelOn, projectLinks.xdesign],
+        xdesign: [projectLinks.someWeather, projectLinks.asianCHI],
+        asianCHI: [projectLinks.xdesign, projectLinks.color],
+        color: [projectLinks.asianCHI, projectLinks.nft],
+        nft: [projectLinks.color, projectLinks.goodFood],
+        goodFood: [projectLinks.color, projectLinks.nft],
     }
 
   return (
-    <div data-scroll-section>
+    <div>
         <div className="footer-div m-0 p-0 px-5 pt-5 pb-3">
             <Container>
-            <Divider height={24}/>
+            <div style={{height: "24px"}}></div>
                 <div>
                     <div className="text-white more-projects mb-4 mt-3">
                         <p className="bebas-text" style={{fontSize: "120px", lineHeight: "120px"}}>More Projects</p>

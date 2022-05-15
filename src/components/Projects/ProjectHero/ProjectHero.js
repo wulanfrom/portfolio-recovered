@@ -3,6 +3,7 @@ import './ProjectHero.css'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import someWeatherpng from '../../../resources/someWeather/some-weather.png'
+import Divider from '../../Divider/Divider';
 
 export default function ProjectHero(props) {
     const title = props.title;
@@ -17,11 +18,12 @@ export default function ProjectHero(props) {
     const border_style = '2px solid ' + textColor;
 
   return (
-    <div data-scroll-section>
+    <div>
         <div style={{backgroundColor: bgColor, color: textColor}} className="hero-section d-flex flex-column">
         <div className="pt-5">
           <Container className="pt-5">
-            <div className="mt-5"></div>
+            <Divider height={72} />
+            {/* <div className="mt-5"></div> */}
             <p className="hero-project-category m-0">{category}</p>
             <p style={{fontSize: "150px", lineHeight: "150px"}} className="bebas-text hero-project-title m-0">{title}</p>
             <p className="hero-project-desc mb-5">{desc}</p>

@@ -2,9 +2,9 @@ import React, { useRef, useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'
 import { Routes, Route, Link } from "react-router-dom";
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
-
+import { CSSTransition } from 'react-transition-group';
+import {gsap} from 'gsap'
 
 import Navigation from './components/Navbar/Navigation'
 import Work from './components/Work/Work'
@@ -24,14 +24,16 @@ import AsianCHI from './components/Projects/AsianCHI/AsianCHI';
 
 // hooks
 import useLocoScroll from './hooks/useLocoScroll'
+import locomotiveScroll from 'locomotive-scroll';
+import ScrollToTop from './hooks/ScrollToTop';
 
 function App() {
   const containerRef = useRef(null)
-  const { scroll } = useLocomotiveScroll();
+  // const { scroll } = useLocomotiveScroll();
 
   // pre-loader , helps with animation
   const [preloader, setPreloader] = useState(true);
-  useLocoScroll(!preloader);
+  // useLocoScroll(!preloader);
 
   const [timer, setTimer] = useState(1);
   const id = useRef(null);
@@ -55,19 +57,18 @@ function App() {
     }
   }, [timer])
 
-
-
   return (
       <>
       { preloader ? (
         <div style={{height: "100vh", backgroundColor:"#171717", color: "#fff"}} className="loader-wrapper absolute d-flex justify-content-center align-items-center flex-column">
-          <h1 style={{ fontFamily: "'Bebas Neue', cursive", fontSize: "80px" }}>Portfolio is Loading</h1>
-          <h2 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300 }}>Please wait</h2>
+          <h1 style={{ fontFamily: "'Bebas Neue', cursive", fontSize: "80px" }}>The Portfolio is Loading</h1>
+          <h2 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300 }}>Have some tea while you wait🍵</h2>
         </div>
       ): (
-        <div data-scroll-container id="portfolio-container">
+        <div ref={containerRef} id="portfolio-container">
             <Navigation />
 
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Work />} />
               <Route path="about" element={<About />} />

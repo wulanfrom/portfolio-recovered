@@ -1,15 +1,12 @@
 .feature-card-container {
     min-height: 470px;
-    clip-path: inset(100% 0% 0% 0%);
+    // clip-path: inset(100% 0% 0% 0%);
     transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
-
-    &.is-reveal {
-        clip-path: inset(0% 0% 0% 0%);
-    }
-    
+    margin-bottom: 28px;
 }
 .link-container {
     text-decoration: none!important;
+    // clip-path: inset(0% 0% 0% 0%);
 }
 
 .card-div {

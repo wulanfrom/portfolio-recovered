@@ -63,7 +63,7 @@ export default function Navigation(props) {
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <NavLink activeStyle={{ textDecoration: "underline" }} style={{ color: chosenColor[1] }} className="nav-link each-link" to="/" exact>Work</NavLink>
-              <NavLink activeStyle={{ textDecoration: "underline" }} style={{ color: chosenColor[1] }} className="nav-link each-link" to="/about" exact>About</NavLink>
+              {/* <NavLink activeStyle={{ textDecoration: "underline" }} style={{ color: chosenColor[1] }} className="nav-link each-link" to="/about" exact>About</NavLink> */}
               <NavLink activeStyle={{ textDecoration: "underline" }} style={{ color: chosenColor[1] }} className="nav-link each-link" to="/contact" exact>Contact</NavLink>
             </Nav>
             </Navbar.Collapse>

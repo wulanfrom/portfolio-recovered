@@ -52,7 +52,7 @@
 }
 
 .project-content {
-    margin-top: 72px;
+    /* margin-top: 72px; */
 }
 
 .img-giant {
@@ -153,14 +153,14 @@
     height: 290px;
     width: 100%;
     border-radius: 4px;
-    position: relative;
+    /* position: relative; */
     text-align: bottom;
 }
 
 .context-desc {
     max-width: 420px;
     color: #fff;
-    position: absolute;
+    /* position: absolute; */
     bottom: 8px;
     left: 16px;
     right: 16px;

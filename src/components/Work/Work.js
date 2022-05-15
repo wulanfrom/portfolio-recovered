@@ -16,23 +16,9 @@ export default function Work() {
     
   return (
     <div data-scroll-section>
-        {/* <Navigation />  */}
         <div>
             <div style={{backgroundColor: "#171717", color: "#fff", height: "110vh"}} className="hero-section hero-animated d-flex flex-column">
                 <Divider height={150}/>
-                {/* <div className="pt-5">
-                    <Container>
-                        <Row>
-                            <Col sm={10} md={10} lg={9}>
-                                <div className=""></div>
-                                <p className="hero-project-category mt-5">DESIGNER // DEVELOPER // problem solver</p>
-                                <p style={{fontSize: "150px", lineHeight: "150px"}} className="bebas-text hero-project-title m-0">Hi, I'm Nabila!👋</p>
-                                <p style={{fontSize: "32px"}} className="hero-project-desc mb-5">Working at the intersection of design and code, creating experiences that help people.</p>
-                            </Col>
-                            <Col></Col>
-                        </Row>
-                    </Container>
-                </div> */}
                 <Container className="work-inner">
                     <BigTitle lineContent1="DESIGNER // DEVELOPER // PROBLEM SOLVER" lineContent2="Hi, I'm Nabila!👋"/>
                 </Container>
@@ -46,7 +32,7 @@ export default function Work() {
                 <FeaturedProjects />
             </div>
 
-            <Divider height={180}/>
+            <Divider height={120}/>
 
             <div id="other-projects">
                 <OtherProjects />

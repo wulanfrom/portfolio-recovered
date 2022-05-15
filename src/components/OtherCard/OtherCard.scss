@@ -35,12 +35,12 @@
     height: 250px;
     width: 100%;
     // display: inline!important;
-    clip-path: inset(100% 0% 0% 0%);
-    transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+    // clip-path: inset(100% 0% 0% 0%);
+    // transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
 
-    &.is-reveal {
-        clip-path: inset(0% 0% 0% 0%);
-    }
+    // &.is-reveal {
+    //     clip-path: inset(0% 0% 0% 0%);
+    // }
 }
 
 /* Medium */
