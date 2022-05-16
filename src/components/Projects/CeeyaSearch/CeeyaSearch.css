@@ -9,7 +9,17 @@
     color: #ffffff;
 }
 
-.Section-line-ceeya {
+.Section-line-cs {
     width: 75px;
     border: 3px solid #272727;
+}
+
+.cs-inProgress {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+}
+
+.cs-inProgress-sm {
+    font-weight: 300;
+    font-size: 32px;
 }

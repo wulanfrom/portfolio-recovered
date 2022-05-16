@@ -55,7 +55,6 @@ export default function reBalance() {
     <div data-scroll-container>
         <div data-scroll-section className="reBalance-doc">
             <ProjectHero bgColor={colors[0]} textColor={colors[1]} heroImg={rebalancepng} category={category} title={projectTitle} desc={projectDesc} role={role} sector={sector}/>
-            <div style={{height: "72px"}}></div>
             <div className="project-content">
                 {/* Overview */}
                 <Container>
