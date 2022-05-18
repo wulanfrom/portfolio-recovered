@@ -105,7 +105,7 @@ export default function FeaturedProjects() {
   return (
     <div>
         <div className="sub-title my-5">
-            <h1 ref={titleRef} style={{fontSize: "120px"}} className={cn("bebas-text", {"is-reveal": reveal})}>Featured Projects</h1>
+            <h1 ref={titleRef} style={{fontSize: "120px"}} className="bebas-text">Featured Projects</h1>
             {/* <p className="section-sub">Here are some projects that I am proud of!</p> */}
         </div>
 
