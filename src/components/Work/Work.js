@@ -18,7 +18,7 @@ export default function Work() {
     <div data-scroll-section>
         <div>
             <div style={{backgroundColor: "#171717", color: "#fff", height: "110vh"}} className="hero-section hero-animated d-flex flex-column">
-                <Divider height={150}/>
+                <Divider height={120}/>
                 <Container className="work-inner">
                     <BigTitle lineContent1="DESIGNER // DEVELOPER // PROBLEM SOLVER" lineContent2="Hi, I'm Nabila!👋"/>
                 </Container>

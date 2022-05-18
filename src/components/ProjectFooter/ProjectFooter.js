@@ -53,12 +53,12 @@ export default function ProjectFooter(props) {
             <div style={{height: "24px"}}></div>
                 <div>
                     <div className="text-white more-projects mb-4 mt-3">
-                        <p className="bebas-text" style={{fontSize: "120px", lineHeight: "120px"}}>More Projects</p>
+                    <p className="footer-move-text  footer-tag m-0 mb-4">Interested in other projects?</p>
+                        <Link to="/" style={{color: "#fff"}}><p className="bebas-text" style={{fontSize: "120px", lineHeight: "120px"}}>Back to Projects</p></Link>
                     </div>
                 </div>
-                <Row>
+                {/* <Row>
                     <Col>
-                        {/* useHistory later */}
                         <Link className="link-container" to={ projectLinks.ceeya }>
                             <img className="prev-project-item" src={prevProject}></img>
                             <div className="pt-2">
@@ -76,15 +76,16 @@ export default function ProjectFooter(props) {
                             </div>
                         </Link>
                     </Col>
-                </Row>
+                </Row> */}
+                <Divider height={24} />
                 <Row className="footer-responsive mt-3 mb-2">
                     <Col sm={12} md={12} lg={12} className="d-flex align-items-center justify-content-center text-white">
                         <div className="d-flex">
-                            <img className="social-icon me-3 mb-2" src={Email} />
-                            <img className="social-icon me-3 mb-2" src={Behance} />   
-                            <img className="social-icon me-3 mb-2" src={Dribbble} />
-                            <img className="social-icon me-3 mb-2" src={LinkedIn} />
-                            <img className="social-icon mb-2" src={Github} />
+                            <a href="mailto:biasindi.wulanfrom@gmail.com" target="_blank" rel="noopener noreferrer" className="social-links"><img className="social-icon me-3 mb-2" src={Email} /></a>
+                            <a href="https://www.behance.net/wulanfrom" target="_blank" rel="noopener noreferrer" className="social-links"><img className="social-icon me-3 mb-2" src={Behance} /></a>
+                            <a href="https://dribbble.com/biasindi" target="_blank" rel="noopener noreferrer" className="social-links"><img className="social-icon me-3 mb-2" src={Dribbble} /></a>
+                            <a href="https://www.linkedin.com/in/wulanfrom/" target="_blank" rel="noopener noreferrer" className="social-links"><img className="social-icon me-3 mb-2" src={LinkedIn} /></a>
+                            <a href="https://github.com/wulanfrom" target="_blank" rel="noopener noreferrer" className="social-links"><img className="social-icon me-3 mb-2" src={Github} /></a>
                         </div>
                     </Col>
                 </Row>
